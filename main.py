@@ -16,4 +16,4 @@ def jeux():
   return render_template('page_jeux.html', resultat="gagné", tira=mon_tirage)
 
 
-app.run(host='0.0.0.0', port=81)
+#app.run(host='0.0.0.0', port=81)
