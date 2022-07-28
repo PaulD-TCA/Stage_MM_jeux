@@ -13,7 +13,8 @@ def jeux():
   mon_tirage = des.tirage_des().tirage()
   choix_joueur = request.form.get('le_pari')
   print(choix_joueur)
-  return render_template('page_jeux.html', resultat="gagné", tira=mon_tirage)
+  resultat = des.tirage_des().verification(choix_joueur,mon_tirage)
+  return render_template('page_jeux.html', resu=resultat, tira=mon_tirage)
 
 
 #app.run(host='0.0.0.0', port=81)
